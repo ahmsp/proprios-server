@@ -1,0 +1,33 @@
+# v2 syntax
+version: '2'
+
+# Named volumes
+volumes:
+  # MySQL Data
+  proprios-mysql-data:
+    driver: local
+
+services:
+  # MySQL (5.7)
+  mysql:
+    image: ambientum/mysql:5.7
+    container_name: proprios-mysql
+    volumes:
+      - ./.mysql-data:/var/lib/mysql
+    ports:
+      - "3309:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=proprios
+      - MYSQL_USER=proprios
+      - MYSQL_PASSWORD=proprios
+  # PHP (with Caddy)
+  app:
+    image: ambientum/php:7.0-caddy
+    container_name: proprios-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "8090:8080"
+    links:
+      - mysql
