@@ -167,6 +167,8 @@ return [
         /*
          * Package Service Providers...
          */
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
 
         /*
          * Application Service Providers...
