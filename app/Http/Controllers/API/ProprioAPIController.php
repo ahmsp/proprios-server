@@ -38,9 +38,10 @@ class ProprioAPIController extends AppBaseController
     {
         $this->proprioRepository->pushCriteria(new RequestCriteria($request));
         $this->proprioRepository->pushCriteria(new LimitOffsetCriteria($request));
-        $proprios = $this->proprioRepository->all();
 
-        return $this->sendResponse($proprios->toArray(), 'Proprios retrieved successfully');
+        $proprios = $this->proprioRepository->paginate($request->get('limit', 25));
+
+        return $this->sendResponse($proprios->toArray(), 'Proprios recuperado com sucesso');
     }
 
     /**
@@ -57,7 +58,7 @@ class ProprioAPIController extends AppBaseController
 
         $proprios = $this->proprioRepository->create($input);
 
-        return $this->sendResponse($proprios->toArray(), 'Proprio saved successfully');
+        return $this->sendResponse($proprios->toArray(), 'Proprio salvo com sucesso');
     }
 
     /**
@@ -74,10 +75,10 @@ class ProprioAPIController extends AppBaseController
         $proprio = $this->proprioRepository->findWithoutFail($id);
 
         if (empty($proprio)) {
-            return $this->sendError('Proprio not found');
+            return $this->sendError('Proprio não encontrado');
         }
 
-        return $this->sendResponse($proprio->toArray(), 'Proprio retrieved successfully');
+        return $this->sendResponse($proprio->toArray(), 'Proprio recuperado com sucesso');
     }
 
     /**
@@ -97,17 +98,17 @@ class ProprioAPIController extends AppBaseController
         $proprio = $this->proprioRepository->findWithoutFail($id);
 
         if (empty($proprio)) {
-            return $this->sendError('Proprio not found');
+            return $this->sendError('Proprio não encontrado');
         }
 
         $proprio = $this->proprioRepository->update($input, $id);
 
-        return $this->sendResponse($proprio->toArray(), 'Proprio updated successfully');
+        return $this->sendResponse($proprio->toArray(), 'Proprio atualizado com sucesso');
     }
 
     /**
      * Remove the specified Proprio from storage.
-     * DELETE /proprios/{id}
+     * DELETE /proprgit ios/{id}
      *
      * @param  int $id
      *
@@ -119,11 +120,11 @@ class ProprioAPIController extends AppBaseController
         $proprio = $this->proprioRepository->findWithoutFail($id);
 
         if (empty($proprio)) {
-            return $this->sendError('Proprio not found');
+            return $this->sendError('Proprio não encontrado');
         }
 
         $proprio->delete();
 
-        return $this->sendResponse($id, 'Proprio deleted successfully');
+        return $this->sendResponse($id, 'Proprio removido com sucesso');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Proprios\Http\Controllers;
 
-use InfyOm\Generator\Utils\ResponseUtil;
+use Proprios\Utils\ResponseUtil;
 use Response;
 
 /**
