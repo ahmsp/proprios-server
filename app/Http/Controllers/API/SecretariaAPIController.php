@@ -40,7 +40,7 @@ class SecretariaAPIController extends AppBaseController
         $this->secretariaRepository->pushCriteria(new LimitOffsetCriteria($request));
         $secretarias = $this->secretariaRepository->all();
 
-        return $this->sendResponse($secretarias->toArray(), 'Secretarias recuperado com sucesso');
+        return $this->sendResponse($secretarias->toArray(), 'Secretarias retrieved successfully');
     }
 
     /**
@@ -57,7 +57,7 @@ class SecretariaAPIController extends AppBaseController
 
         $secretarias = $this->secretariaRepository->create($input);
 
-        return $this->sendResponse($secretarias->toArray(), 'Secretaria salvo com sucesso');
+        return $this->sendResponse($secretarias->toArray(), 'Secretaria saved successfully');
     }
 
     /**
@@ -74,10 +74,10 @@ class SecretariaAPIController extends AppBaseController
         $secretaria = $this->secretariaRepository->findWithoutFail($id);
 
         if (empty($secretaria)) {
-            return $this->sendError('Secretaria não encontrado');
+            return $this->sendError('Secretaria not found');
         }
 
-        return $this->sendResponse($secretaria->toArray(), 'Secretaria recuperado com sucesso');
+        return $this->sendResponse($secretaria->toArray(), 'Secretaria retrieved successfully');
     }
 
     /**
@@ -97,12 +97,12 @@ class SecretariaAPIController extends AppBaseController
         $secretaria = $this->secretariaRepository->findWithoutFail($id);
 
         if (empty($secretaria)) {
-            return $this->sendError('Secretaria não encontrado');
+            return $this->sendError('Secretaria not found');
         }
 
         $secretaria = $this->secretariaRepository->update($input, $id);
 
-        return $this->sendResponse($secretaria->toArray(), 'Secretaria atualizado com sucesso');
+        return $this->sendResponse($secretaria->toArray(), 'Secretaria updated successfully');
     }
 
     /**
@@ -119,11 +119,11 @@ class SecretariaAPIController extends AppBaseController
         $secretaria = $this->secretariaRepository->findWithoutFail($id);
 
         if (empty($secretaria)) {
-            return $this->sendError('Secretaria não encontrado');
+            return $this->sendError('Secretaria not found');
         }
 
         $secretaria->delete();
 
-        return $this->sendResponse($id, 'Secretaria removido com sucesso');
+        return $this->sendResponse($id, 'Secretaria deleted successfully');
     }
 }

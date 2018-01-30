@@ -40,7 +40,7 @@ class TipoAPIController extends AppBaseController
         $this->tipoRepository->pushCriteria(new LimitOffsetCriteria($request));
         $tipos = $this->tipoRepository->all();
 
-        return $this->sendResponse($tipos->toArray(), 'Tipos recuperado com sucesso');
+        return $this->sendResponse($tipos->toArray(), 'Tipos retrieved successfully');
     }
 
     /**
@@ -57,7 +57,7 @@ class TipoAPIController extends AppBaseController
 
         $tipos = $this->tipoRepository->create($input);
 
-        return $this->sendResponse($tipos->toArray(), 'Tipo salvo com sucesso');
+        return $this->sendResponse($tipos->toArray(), 'Tipo saved successfully');
     }
 
     /**
@@ -74,10 +74,10 @@ class TipoAPIController extends AppBaseController
         $tipo = $this->tipoRepository->findWithoutFail($id);
 
         if (empty($tipo)) {
-            return $this->sendError('Tipo não encontrado');
+            return $this->sendError('Tipo not found');
         }
 
-        return $this->sendResponse($tipo->toArray(), 'Tipo recuperado com sucesso');
+        return $this->sendResponse($tipo->toArray(), 'Tipo retrieved successfully');
     }
 
     /**
@@ -97,12 +97,12 @@ class TipoAPIController extends AppBaseController
         $tipo = $this->tipoRepository->findWithoutFail($id);
 
         if (empty($tipo)) {
-            return $this->sendError('Tipo não encontrado');
+            return $this->sendError('Tipo not found');
         }
 
         $tipo = $this->tipoRepository->update($input, $id);
 
-        return $this->sendResponse($tipo->toArray(), 'Tipo atualizado com sucesso');
+        return $this->sendResponse($tipo->toArray(), 'Tipo updated successfully');
     }
 
     /**
@@ -119,11 +119,11 @@ class TipoAPIController extends AppBaseController
         $tipo = $this->tipoRepository->findWithoutFail($id);
 
         if (empty($tipo)) {
-            return $this->sendError('Tipo não encontrado');
+            return $this->sendError('Tipo not found');
         }
 
         $tipo->delete();
 
-        return $this->sendResponse($id, 'Tipo removido com sucesso');
+        return $this->sendResponse($id, 'Tipo deleted successfully');
     }
 }

@@ -6,18 +6,18 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Secretaria
+ * Class LegislacaoTipo
  * @package Proprios\Models
- * @version January 30, 2018, 4:55 pm UTC
+ * @version January 30, 2018, 4:54 pm UTC
  *
  * @property \Illuminate\Database\Eloquent\Collection Proprio
  * @property string nome
  */
-class Secretaria extends Model
+class LegislacaoTipo extends Model
 {
     use SoftDeletes;
 
-    public $table = 'secretaria';
+    public $table = 'legislacao_tipo';
     
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';

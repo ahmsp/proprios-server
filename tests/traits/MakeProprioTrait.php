@@ -42,6 +42,7 @@ trait MakeProprioTrait
         $fake = Faker::create();
 
         return array_merge([
+            'tipo_id' => $fake->randomDigitNotNull,
             'criacao_nome' => $fake->word,
             'criacao_descritivo' => $fake->text,
             'criacao_ato' => $fake->word,
@@ -52,15 +53,18 @@ trait MakeProprioTrait
             'nome_extenso' => $fake->word,
             'denominacao_descritivo' => $fake->text,
             'legislacao_extenso' => $fake->word,
-            'legislacao_tipo' => $fake->word,
+            'legislacao_tipo_id' => $fake->randomDigitNotNull,
             'legislacao_data' => $fake->word,
             'endereco' => $fake->word,
-            'distrito' => $fake->word,
-            'subprefeitura' => $fake->word,
+            'distrito_id' => $fake->randomDigitNotNull,
+            'subprefeitura_id' => $fake->randomDigitNotNull,
             'telefone' => $fake->word,
-            'secretaria' => $fake->word,
+            'secretaria_id' => $fake->randomDigitNotNull,
             'registro_data' => $fake->word,
-            'historico' => $fake->text
+            'historico' => $fake->text,
+            'created_at' => $fake->date('Y-m-d H:i:s'),
+            'updated_at' => $fake->date('Y-m-d H:i:s'),
+            'deleted_at' => $fake->date('Y-m-d H:i:s')
         ], $proprioFields);
     }
 }

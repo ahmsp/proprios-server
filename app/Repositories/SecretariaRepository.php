@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class SecretariaRepository
  * @package Proprios\Repositories
- * @version January 22, 2018, 6:23 pm UTC
+ * @version January 30, 2018, 4:55 pm UTC
  *
  * @method Secretaria findWithoutFail($id, $columns = ['*'])
  * @method Secretaria find($id, $columns = ['*'])

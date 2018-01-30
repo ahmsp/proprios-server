@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Tipo
  * @package Proprios\Models
- * @version January 22, 2018, 6:22 pm UTC
+ * @version January 30, 2018, 4:57 pm UTC
  *
+ * @property \Illuminate\Database\Eloquent\Collection Proprio
  * @property string sigla
  * @property string nome
  */
@@ -51,5 +52,11 @@ class Tipo extends Model
         
     ];
 
-    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     **/
+    public function proprios()
+    {
+        return $this->hasMany(\Proprios\Models\Proprio::class);
+    }
 }

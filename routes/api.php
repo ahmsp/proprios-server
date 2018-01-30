@@ -23,3 +23,15 @@ Route::resource('proprios', 'ProprioAPIController');
 Route::resource('tipos', 'TipoAPIController');
 
 Route::resource('secretarias', 'SecretariaAPIController');
+
+Route::resource('distritos', 'DistritoAPIController');
+
+Route::resource('legislacao_tipos', 'LegislacaoTipoAPIController');
+
+Route::resource('secretarias', 'SecretariaAPIController');
+
+Route::resource('subprefeituras', 'SubprefeituraAPIController');
+
+Route::resource('tipos', 'TipoAPIController');
+
+Route::resource('proprios', 'ProprioAPIController');

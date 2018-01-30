@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class ProprioRepository
  * @package Proprios\Repositories
- * @version January 22, 2018, 5:15 pm UTC
+ * @version January 30, 2018, 4:58 pm UTC
  *
  * @method Proprio findWithoutFail($id, $columns = ['*'])
  * @method Proprio find($id, $columns = ['*'])
@@ -20,6 +20,7 @@ class ProprioRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        'tipo_id',
         'criacao_nome',
         'criacao_descritivo',
         'criacao_ato',
@@ -30,13 +31,13 @@ class ProprioRepository extends BaseRepository
         'nome_extenso',
         'denominacao_descritivo',
         'legislacao_extenso',
-        'legislacao_tipo',
+        'legislacao_tipo_id',
         'legislacao_data',
         'endereco',
-        'distrito',
-        'subprefeitura',
+        'distrito_id',
+        'subprefeitura_id',
         'telefone',
-        'secretaria',
+        'secretaria_id',
         'registro_data',
         'historico'
     ];

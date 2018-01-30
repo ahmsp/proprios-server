@@ -8,8 +8,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Proprio
  * @package Proprios\Models
- * @version January 22, 2018, 5:15 pm UTC
+ * @version January 30, 2018, 4:58 pm UTC
  *
+ * @property \Proprios\Models\Distrito distrito
+ * @property \Proprios\Models\LegislacaoTipo legislacaoTipo
+ * @property \Proprios\Models\Secretarium secretarium
+ * @property \Proprios\Models\Subprefeitura subprefeitura
+ * @property \Proprios\Models\Tipo tipo
+ * @property integer tipo_id
  * @property string criacao_nome
  * @property string criacao_descritivo
  * @property string criacao_ato
@@ -20,13 +26,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string nome_extenso
  * @property string denominacao_descritivo
  * @property string legislacao_extenso
- * @property string legislacao_tipo
+ * @property integer legislacao_tipo_id
  * @property date legislacao_data
  * @property string endereco
- * @property string distrito
- * @property string subprefeitura
+ * @property integer distrito_id
+ * @property integer subprefeitura_id
  * @property string telefone
- * @property string secretaria
+ * @property integer secretaria_id
  * @property date registro_data
  * @property string historico
  */
@@ -44,6 +50,7 @@ class Proprio extends Model
 
 
     public $fillable = [
+        'tipo_id',
         'criacao_nome',
         'criacao_descritivo',
         'criacao_ato',
@@ -54,13 +61,13 @@ class Proprio extends Model
         'nome_extenso',
         'denominacao_descritivo',
         'legislacao_extenso',
-        'legislacao_tipo',
+        'legislacao_tipo_id',
         'legislacao_data',
         'endereco',
-        'distrito',
-        'subprefeitura',
+        'distrito_id',
+        'subprefeitura_id',
         'telefone',
-        'secretaria',
+        'secretaria_id',
         'registro_data',
         'historico'
     ];
@@ -72,6 +79,7 @@ class Proprio extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'tipo_id' => 'integer',
         'criacao_nome' => 'string',
         'criacao_descritivo' => 'string',
         'criacao_ato' => 'string',
@@ -82,13 +90,13 @@ class Proprio extends Model
         'nome_extenso' => 'string',
         'denominacao_descritivo' => 'string',
         'legislacao_extenso' => 'string',
-        'legislacao_tipo' => 'string',
+        'legislacao_tipo_id' => 'integer',
         'legislacao_data' => 'date',
         'endereco' => 'string',
-        'distrito' => 'string',
-        'subprefeitura' => 'string',
+        'distrito_id' => 'integer',
+        'subprefeitura_id' => 'integer',
         'telefone' => 'string',
-        'secretaria' => 'string',
+        'secretaria_id' => 'integer',
         'registro_data' => 'date',
         'historico' => 'string'
     ];
@@ -102,5 +110,43 @@ class Proprio extends Model
         
     ];
 
-    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function distrito()
+    {
+        return $this->belongsTo(\Proprios\Models\Distrito::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function legislacaoTipo()
+    {
+        return $this->belongsTo(\Proprios\Models\LegislacaoTipo::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function secretarium()
+    {
+        return $this->belongsTo(\Proprios\Models\Secretarium::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function subprefeitura()
+    {
+        return $this->belongsTo(\Proprios\Models\Subprefeitura::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function tipo()
+    {
+        return $this->belongsTo(\Proprios\Models\Tipo::class);
+    }
 }
