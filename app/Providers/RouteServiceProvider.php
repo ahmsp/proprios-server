@@ -2,7 +2,8 @@
 
 namespace Proprios\Providers;
 
-use Illuminate\Support\Facades\Route;
+//use Illuminate\Support\Facades\Route;
+use Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
@@ -66,7 +67,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::group([
-            'middleware' => ['api'],
+            'middleware' => ['api', 'cors'],
             'namespace' => $this->namespace."\\API",
             'prefix' => 'api',
             'as' => 'api.',
