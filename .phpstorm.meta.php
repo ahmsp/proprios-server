@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2018-01-22.
+    * Generated on 2018-02-01.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -38,6 +38,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'infyom.publish' => \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.scaffold' => \InfyOm\Generator\Commands\Scaffold\ScaffoldGeneratorCommand::class,
@@ -186,6 +187,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'infyom.publish' => \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.scaffold' => \InfyOm\Generator\Commands\Scaffold\ScaffoldGeneratorCommand::class,
@@ -334,6 +336,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'infyom.publish' => \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.scaffold' => \InfyOm\Generator\Commands\Scaffold\ScaffoldGeneratorCommand::class,
@@ -482,6 +485,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'infyom.publish' => \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.scaffold' => \InfyOm\Generator\Commands\Scaffold\ScaffoldGeneratorCommand::class,
@@ -630,6 +634,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'infyom.publish' => \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.scaffold' => \InfyOm\Generator\Commands\Scaffold\ScaffoldGeneratorCommand::class,
@@ -778,6 +783,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'infyom.publish' => \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.scaffold' => \InfyOm\Generator\Commands\Scaffold\ScaffoldGeneratorCommand::class,
@@ -926,6 +932,7 @@ namespace PHPSTORM_META {
         'view' => \Illuminate\View\Factory::class,
         'view.finder' => \Illuminate\View\FileViewFinder::class,
         'view.engine.resolver' => \Illuminate\View\Engines\EngineResolver::class,
+        'Asm89\Stack\CorsService' => \Asm89\Stack\CorsService::class,
         'infyom.publish' => \InfyOm\Generator\Commands\Publish\GeneratorPublishCommand::class,
         'infyom.api' => \InfyOm\Generator\Commands\API\APIGeneratorCommand::class,
         'infyom.scaffold' => \InfyOm\Generator\Commands\Scaffold\ScaffoldGeneratorCommand::class,
